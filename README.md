@@ -35,75 +35,79 @@ Wordware plays a critical role in the automation of educational video creation:
 - **State Management**: Handles video generation states.
 - **CSS Modules**: Styles UI components.
 
-## Project Structure
+## Installation
+### Backend Setup
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-repo/wordware-poc.git
+   cd video-maker
+   ```
+2. Create and activate a virtual environment:
+   ```sh
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+3. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+4. Set up environment variables:
+   - Create a `.env` file in the backend directory and add:
+     ```env
+     API_KEY=your_wordware_api_key
+     ```
+
+### Frontend Setup
+1. Navigate to the frontend folder:
+   ```sh
+   cd ../frontend
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the frontend:
+   ```sh
+   npm start
+   ```
+
+## Running the Application
+### Start the Backend Server
+```sh
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
-video-maker/
-├─ .env
-├─ .gitignore
-├─ package-lock.json
-├─ package.json
-├─ public/
-│  ├─ favicon.ico
-│  ├─ index.html
-│  ├─ logo192.png
-│  ├─ logo512.png
-│  ├─ manifest.json
-│  └─ robots.txt
-├─ README.md
-├─ src/
-│  ├─ App.css
-│  ├─ App.jsx
-│  ├─ App.test.js
-│  ├─ assets/
-│  │  ├─ audio.png
-│  │  ├─ logo.png
-│  │  ├─ logo.svg
-│  │  ├─ preview1.png
-│  │  ├─ preview2.png
-│  │  ├─ preview3.png
-│  │  └─ star.png
-│  ├─ components/
-│  │  ├─ Hero.css
-│  │  ├─ Hero.jsx
-│  │  ├─ Navbar.css
-│  │  ├─ Navbar.jsx
-│  │  ├─ TextToVideo.css
-│  │  └─ TextToVideo.jsx
-│  ├─ index.css
-│  ├─ index.js
-│  ├─ reportWebVitals.js
-│  ├─ services/
-│  │  ├─ aiService.js
-│  │  ├─ audio.mp3
-│  │  ├─ audio_insert.py
-│  │  ├─ backend copy.py
-│  │  ├─ backend.py
-│  │  ├─ default_video.mp4
-│  │  ├─ downloaded_audio.mp3
-│  │  ├─ extract_animation_python.py
-│  │  ├─ find_script.py
-│  │  ├─ generated_manim.py
-│  │  ├─ media/
-│  │  │  ├─ final_video.mp4
-│  │  │  ├─ images/
-│  │  │  │  └─ generated_manim/
-│  │  │  └─ videos/
-│  │  │     └─ generated_manim/
-│  │  │        └─ 480p90/
-│  │  │           └─ default_video.mp4
-│  │  ├─ output/
-│  │  │  └─ final_video.mp4
-│  │  ├─ response.txt
-│  │  ├─ stretched_video.mp4
-│  │  ├─ test.py
-│  │  ├─ video_captions.py
-│  │  ├─ video_stretch.py
-│  │  └─ __pycache__/
-│  │     ├─ backend.cpython-312.pyc
-│  │     └─ generated_manim.cpython-312.pyc
-│  └─ setupTests.js
-└─ structure.txt
+### Start the Frontend
+```sh
+npm start
 ```
+### Access the Web Interface
+Open a browser and navigate to:
+```
+http://localhost:3000
+```
+
+## API Endpoints
+### Generate Video
+- **Endpoint:** `POST /generate-video`
+- **Request Body:**
+  ```json
+  {
+    "topic": "Introduction to Derivatives"
+  }
+  ```
+- **Response:**
+  ```json
+  {
+    "final_video": "http://localhost:8000/output/final_video.mp4",
+    "original_video": "path/to/original.mp4",
+    "stretched_video": "path/to/stretched.mp4",
+    "captioned_video": "path/to/captioned.mp4",
+    "audio_file": "path/to/audio.mp3",
+    "response_file": "path/to/response.txt",
+    "python_code_file": "path/to/generated_manim.py",
+    "extracted_script": "Extracted script text"
+  }
+  ```
 
 ## Demo and Sample Output
 - **Recorded Demo:** [Insert link to demo video]
