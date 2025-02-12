@@ -1,5 +1,6 @@
 # Wordware POC - ReadMe
-![download (3)](https://github.com/user-attachments/assets/290c1bb8-4dc7-4334-8c41-9abf836598c7)
+![Squeak (3)](https://github.com/user-attachments/assets/91ddefef-a0c2-4239-ac66-b3614f486c46)
+
 
 
 
