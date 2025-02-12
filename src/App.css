@@ -1,0 +1,107 @@
+/* --------------------------
+   Global Reset / Box Sizing
+--------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --------------------------
+   Body & App Container
+--------------------------- */
+body {
+  font-family: sans-serif;
+  color: #fff;
+
+  /* NEW gradient resembling the bright purple top-left fade to dark */
+  background: radial-gradient(
+    circle at top left,
+    #a854f5 0%,      /* bright purple at center */
+    #2b044d 30%,     /* deeper purple around midpoint */
+    #080210 60%      /* near-black at outer edges */
+  );
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* --------------------------
+   Navbar
+--------------------------- */
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.6rem 1rem;
+  border-radius: 999px; /* pill-shaped */
+  transition: background 0.3s;
+}
+
+.navbar-links li a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Buttons */
+.btn {
+  cursor: pointer;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+/* Primary button: solid purple */
+.btn-primary {
+  background-color: #a854f5;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #c084fc;
+  transform: scale(1.05);
+}
+
+/* Secondary button: outlined or lighter style */
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #a854f5;
+  color: #a854f5;
+}
+
+.btn-secondary:hover {
+  background-color: #a854f5;
+  color: #fff;
+  transform: scale(1.05);
+}
+

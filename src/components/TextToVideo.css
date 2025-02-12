@@ -1,0 +1,193 @@
+/* Container for the entire Text-to-Video section */
+.text-to-video {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
+  }
+  
+  /* The inner container that holds left and right cards */
+  .text-to-video-container {
+    display: flex;
+    flex-wrap: wrap; /* so it stacks on smaller screens */
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  /* Both "cards" share similar styling; we can use a helper class. */
+  .text-to-video-card {
+    background: linear-gradient(to right, #181a25, #0f121d);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* subtle border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);   /* "benzo" box-like shadow */
+    padding: 2rem;
+    flex: 1;
+    min-width: 280px; /* so they don’t collapse too small */
+    position: relative; /* for the toolbar on the right card */
+  }
+  
+  /* Left card styling (the form) */
+  .left-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Just an example for a little purple text or icon. */
+  .icon-purple {
+    color: #a854f5;
+    font-size: 1.5rem;
+  }
+  
+  /* Another approach to highlight text in purple */
+  .text-purple {
+    color: #a854f5;
+  }
+  
+  /* Form elements */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    color: #fff;
+    resize: none;
+  }
+  
+  textarea::placeholder {
+    color: #aaa;
+  }
+  
+  /* The "Generate" button for the left card */
+  .btn-generate {
+    margin-top: 1rem;
+    background-color: #a854f5;
+    color: #fff;
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-generate:hover {
+    background: linear-gradient(135deg, #7A3CCD 0%, #9E46EF 100%);
+    transform: scale(1.05);
+  }
+  
+  /* Right card styling (images + waveform + toolbar) */
+  .right-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* The 3 images in a row */
+  .preview-images {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .preview-images img {
+    width: 168px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Waveform placeholder / real wave image below the images */
+  .audio-waveform {
+    margin-top: auto; /* push it to the bottom if you like */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem; /* some spacing before toolbar */
+  }
+  
+  .audio-waveform img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Vertical toolbar pinned to the right side inside the card */
+  .vertical-toolbar {
+    position: absolute;
+    top: 50%;
+    right: -3rem;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .toolbar-btn {
+    background: #2a2a2a;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .toolbar-btn:hover {
+    background: #a854f5;
+  }
+  
+  /* Responsive: stack columns on small screens */
+  @media (max-width: 768px) {
+    .text-to-video-container {
+      flex-direction: column;
+    }
+    .vertical-toolbar {
+      right: -2rem; /* or adjust as needed on smaller screens */
+    }
+  }
+
+  .video-container {
+    width: 100%; /* Make it fit the parent container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .final-video {
+      max-width: 100%; /* Prevent overflow */
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain; /* Ensures video fits inside the box */
+      border-radius: 8px; /* Optional: for rounded corners */
+  }
+
+  
+
+  .expanded-preview {
+    width: 100%;
+    max-width: 400px; /* or any size you prefer */
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; /* center it */
+  }
+  

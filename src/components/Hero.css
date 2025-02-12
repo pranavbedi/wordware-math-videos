@@ -1,0 +1,122 @@
+.hero {
+    /* If your entire page background is already a dark gradient, 
+       you might just set padding and skip a separate background here. */
+    position: relative;
+    text-align: center;
+    padding: 5rem 2rem;
+    /* If you want a hero height, uncomment:
+       min-height: 80vh; 
+    */
+  }
+  
+  /* Center content nicely */
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-preheading {
+    display: inline-block;
+    font-size: 0.9rem; /* or your preferred size */
+    color: #fff;
+    /* Rounded shape + slight padding */
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+    /* A semi-translucent white background */
+    background: rgba(255, 255, 255, 0.15);
+    
+    /* Add a subtle glow effect */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    
+    /* Center it if desired */
+    margin: 0 auto 1rem;
+    text-align: center;
+    
+    /* Optional: Add the “—” dashes if you want them around the text 
+       (the screenshot shows small dashes). You could also literally type them:
+         <div className="hero-preheading">— Unlock Your Creative Potential —</div>
+       Or use ::before / ::after pseudo-elements:
+    */
+    position: relative;
+  }
+  /* Gradient text for "Videos" */
+  .text-gradient {
+    background: linear-gradient(to right, #b889e4,#a854f5,  #a854f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* for Firefox */
+  }
+  
+  .hero-preheading::before,
+  .hero-preheading::after {
+    content: "—";
+    color: #ddd;
+    margin: 0 0.4rem;
+  }
+  
+  /* Main heading */
+  .hero h1 {
+    font-size: 3.75rem;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+  
+  .highlight {
+    color: #a854f5; /* Purple highlight for the word "Videos" */
+  }
+  
+  /* Subheading */
+  .hero-subtext {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 2.5rem;
+    margin-left: 3em;
+    margin-right: 3em;
+    line-height: 1.5;
+  }
+  
+  /* CTA Buttons Container */
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  /* Common button class (optional) */
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    border-radius: 999px; /* pill shape */
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+    cursor: pointer;
+  }
+  
+  /* Primary button: solid purple */
+  .hero-btn-primary {
+    background-color: #a854f5;
+    color: #fff;
+    border: none;
+  }
+  .hero-btn-primary:hover {
+    background: linear-gradient(135deg, #9b7bc5 0%, #7316ca 100%);
+    transform: scale(1.05);
+  }
+  
+  /* Secondary button: outlined purple */
+  .hero-btn-secondary {
+    background: #241933 ;
+    color: #ffffff;
+    border: 2px solid #a854f5;
+  }
+  .hero-btn-secondary:hover {
+    background-color: #a854f5;
+    color: #fff;
+    transform: scale(1.05);
+  }
+  

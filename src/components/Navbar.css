@@ -1,0 +1,88 @@
+/********************************
+  NAVBAR CONTAINER
+********************************/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Remove the translucent background from here */
+    /* background: rgba(131, 129, 129, 0.3); */
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 999;
+    /* Remove the border-radius here as well */
+    /* border-radius: 100px; */
+  }
+  
+  /********************************
+    LEFT SIDE: LOGO + LINKS
+  ********************************/
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* space between logo and links */
+    
+    /* Move the translucent background + rounded corners here */
+    background: rgba(131, 129, 129, 0.3);
+    border-radius: 100px;
+    padding: 0.75rem 1rem; /* optional padding to make room for the background */
+  }
+  
+  .navbar-logo img {
+    max-width: 120px;   /* or whatever width you prefer */
+    height: auto;       /* maintain aspect ratio */
+    object-fit: contain; 
+  }
+  
+  
+  /********************************
+    NAV LINKS
+  ********************************/
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* keep your pill shapes for each link as before */
+  .navbar-links li a {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 999px;
+    background: rgba(168, 84, 245, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navbar-links li a:hover {
+    background: linear-gradient(135deg, #7A3CCD 0%, #9E46EF 100%);
+    transform: scale(1.05);
+  }
+  
+  /********************************
+    RIGHT SIDE: "LEARN MORE" BUTTON
+  ********************************/
+  .navbar-right {
+    /* empty, just holds the button */
+  }
+  
+  .navbar-learnMore {
+    display: inline-block;
+    padding: 0.5rem 1.4rem;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid rgba(168, 84, 245, 0.5);
+    border-radius: 999px;
+    background: transparent;
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navbar-learnMore:hover {
+    background: linear-gradient(135deg, #7A3CCD 0%, #9E46EF 100%);
+    border-color: transparent;
+    transform: scale(1.05);
+  }
+  
