@@ -58,23 +58,20 @@ Wordware plays a critical role in the automation of educational video creation:
      ```
 
 ### Frontend Setup
-1. Navigate to the frontend folder:
-   ```sh
-   cd ../frontend
-   ```
-2. Install dependencies:
+1. Install dependencies:
    ```sh
    npm install
    ```
-3. Start the frontend:
+2. Start the frontend:
    ```sh
    npm start
    ```
 
 ## Running the Application
 ### Start the Backend Server
+1. Navigate to src/services:
 ```sh
-uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+python backend.py
 ```
 ### Start the Frontend
 ```sh
@@ -115,7 +112,7 @@ http://localhost:3000
 
 ## My Work with Wordware
 - **Overview:** This project demonstrates the integration of Wordware with video generation, leveraging AI to create highly dynamic and engaging educational videos. By automating script and animation generation, it significantly reduces the effort required to produce content.
-- **Link to Wordware Work:** [Insert link to Wordware-related projects or documentation]
+- [**Link to Wordware Work:**](https://app.wordware.ai/explore/apps/990839b3-d06f-4f3e-a757-a0266057b64d) 
 
 ## Future Improvements
 - Implement conditional generation modes (e.g., promotional content).
