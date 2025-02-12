@@ -107,8 +107,8 @@ http://localhost:3000
   ```
 
 ## Demo and Sample Output
-- **Recorded Demo:** [Insert link to demo video]
-- **Sample Output Video:** [Insert link to final generated video]
+- [**Recorded Demo:**](https://youtu.be/0QTvf_PEEF0) 
+- [**Sample Output Video:** ](https://youtu.be/4kVl8Pmw7zw)
 
 ## My Work with Wordware
 - **Overview:** This project demonstrates the integration of Wordware with video generation, leveraging AI to create highly dynamic and engaging educational videos. By automating script and animation generation, it significantly reduces the effort required to produce content.
