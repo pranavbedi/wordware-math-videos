@@ -1,4 +1,7 @@
 # Wordware POC - ReadMe
+![download (3)](https://github.com/user-attachments/assets/290c1bb8-4dc7-4334-8c41-9abf836598c7)
+
+
 
 ## Overview
 This project is a proof-of-concept (PoC) application that utilizes the Wordware API to generate animated educational videos from textual input. The application is designed with the idea that people learn best with quick 60-75 second videos, similar to those found on TikTok and Reels. Since Wordware does not currently support video output or execution of the Manim Python library, these tasks are handled locally.
